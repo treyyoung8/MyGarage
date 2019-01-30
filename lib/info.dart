@@ -96,7 +96,7 @@ class Info extends StatelessWidget {
                         child: new ListTile(
                           title: Text('Tires'),
                           subtitle: Text(
-                              'Front PSI: 28, Rear PSI: 28\n\Front Size: 255/50VR-16, Rear Size: 255/50VR-16\n\Recommended Replacement: GOODYEAR EAGLE VR'),
+                              'Front PSI: 35, Rear PSI: 35\n\Front Size: 255/50VR-16, Rear Size: 255/50VR-16\n\Recommended Replacement: GOODYEAR EAGLE VR'),
                         ),
                       ),
                     ],
@@ -114,26 +114,7 @@ class Info extends StatelessWidget {
                         ),
                         child: new ListTile(
                           title: Text('Oil'),
-                          subtitle: Text('Type:\n\Capacity: 4.0 Quarts'),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Card(
-                  color: Colors.lightBlue[100],
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: <Widget>[
-                      Padding(
-                        padding: EdgeInsets.only(
-                          bottom: 8.0,
-                          left: 8.0,
-                        ),
-                        child: new ListTile(
-                          title: Text('Brakes'),
-                          subtitle: Text(
-                              'Type (Front and Rear): 11.5 in. vacuum assist. vented disk'),
+                          subtitle: Text('Type: 10w30\n\Capacity: 4.0 Quarts\n\Brand: Mobil 1'),
                         ),
                       ),
                     ],
@@ -151,7 +132,7 @@ class Info extends StatelessWidget {
                         ),
                         child: new ListTile(
                           title: Text('Air Filter'),
-                          subtitle: Text('Type:'),
+                          subtitle: Text('Brand: K&N\n\Part Number: 25-121209-1'),
                         ),
                       ),
                     ],
@@ -189,6 +170,44 @@ class Info extends StatelessWidget {
                         child: new ListTile(
                           title: Text('Fuses'),
                           subtitle: Text('Type:'),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Card(
+                  color: Colors.lightBlue[100],
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                      Padding(
+                        padding: EdgeInsets.only(
+                          bottom: 8.0,
+                          left: 8.0,
+                        ),
+                        child: new ListTile(
+                          title: Text('Brakes'),
+                          subtitle: Text(
+                              'Type (Front and Rear): 11.5 in. vacuum assist. vented disk'),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Card(
+                  color: Colors.lightBlue[100],
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                      Padding(
+                        padding: EdgeInsets.only(
+                          bottom: 8.0,
+                          left: 8.0,
+                        ),
+                        child: new ListTile(
+                          title: Text('Fuel'),
+                          subtitle: Text(
+                              'Type: Premium Fuel only\n\Capacity: 20 Gallons'),
                         ),
                       ),
                     ],
