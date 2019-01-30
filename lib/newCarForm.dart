@@ -65,35 +65,44 @@ class CarForm extends StatelessWidget {
                 ),
                 onPressed: () {
                   showDialog(
-                    context: context,
-                    builder: (context) {
-          return Theme(
-            data: Theme.of(context).copyWith(dialogBackgroundColor: Colors.lightBlue[100]),
-                    child: new AlertDialog(
-                      title: new Text('Is this your car?'),
-                      content: new Text('1985 Chevrolet Corvette\n\n\5.7L V8 230HP 330 ft/lb Torque'),
-                      actions: <Widget>[
-                        RaisedButton(
-                          color: Colors.deepOrange,
-                          child: Text('Confirm',
-                          style: new TextStyle(
-                            color: const Color(0xFF30405A),
-                          ),),
-                          onPressed: () {Navigator.pushNamed(context, '/');},
-                        ),
-                        RaisedButton(
-                          color: Colors.deepOrange,
-                          child: Text('Try Again',
-                          style: new TextStyle(
-                            color: const Color(0xFF30405A),
-                          ),),
-                          onPressed: () {Navigator.pushNamed(context, '/newcar');},
-                        ),
-                      ],
-                    ),
-          );
-                    }
-                  );
+                      context: context,
+                      builder: (context) {
+                        return Theme(
+                          data: Theme.of(context).copyWith(
+                              dialogBackgroundColor: Colors.lightBlue[100]),
+                          child: new AlertDialog(
+                            title: new Text('Is this your car?'),
+                            content: new Text(
+                                '1985 Chevrolet Corvette\n\n\5.7L V8 230HP 330 ft/lb Torque'),
+                            actions: <Widget>[
+                              RaisedButton(
+                                color: Colors.deepOrange,
+                                child: Text(
+                                  'Confirm',
+                                  style: new TextStyle(
+                                    color: const Color(0xFF30405A),
+                                  ),
+                                ),
+                                onPressed: () {
+                                  Navigator.pushNamed(context, '/');
+                                },
+                              ),
+                              RaisedButton(
+                                color: Colors.deepOrange,
+                                child: Text(
+                                  'Try Again',
+                                  style: new TextStyle(
+                                    color: const Color(0xFF30405A),
+                                  ),
+                                ),
+                                onPressed: () {
+                                  Navigator.pushNamed(context, '/newcar');
+                                },
+                              ),
+                            ],
+                          ),
+                        );
+                      });
                 },
               ),
               new SizedBox(

@@ -9,10 +9,8 @@ Future<Cars> fetchCars() async {
       await http.get('http://localhost:3001/cars/1');
 
   if (response.statusCode == 200) {
-    // If the call to the server was successful, parse the JSON
     return Cars.fromJson(json.decode(response.body));
   } else {
-    // If that call was not successful, throw an error.
     throw Exception('Failed to load cars');
   }
 }
@@ -49,7 +47,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // final title = 'MyGarage';
 
     return new MaterialApp(
       initialRoute: '/login',

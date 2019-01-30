@@ -7,10 +7,8 @@ Future<Cars> fetchCars() async {
   final response = await http.get('http://localhost:3001/cars/1');
 
   if (response.statusCode == 200) {
-    // If the call to the server was successful, parse the JSON
     return Cars.fromJson(json.decode(response.body));
   } else {
-    // If that call was not successful, throw an error.
     throw Exception('Failed to load cars');
   }
 }
@@ -75,7 +73,6 @@ class MyGarage extends StatelessWidget {
                 future: cars,
                 builder: (context, snapshot) {
                   if (snapshot.hasData) {
-                    // return Text(snapshot.data.make);
                     return Card(
                       color: Colors.lightBlue[100],
                       child: Column(
@@ -88,8 +85,6 @@ class MyGarage extends StatelessWidget {
                               left: 8.0,
                             ),
                             child: new ListTile(
-                              // leading: new Image.network(snapshot.data.carUrl,
-                              //     height: 100, width: 100),
                               leading: new Container(
                                 width: 110.0,
                                 height: 90.0,
@@ -101,25 +96,50 @@ class MyGarage extends StatelessWidget {
                                           snapshot.data.carUrl)),
                                 ),
                               ),
-                              title: Text('2008 ' +
-                                  (snapshot.data.make) +
-                                  ' ' +
-                                  (snapshot.data.model)),
-                              subtitle: Text('5.4L V8 500hp 480 ft/lb Torque'),
+                              title: Text(
+                                '2008 ' +
+                                    (snapshot.data.make) +
+                                    ' ' +
+                                    (snapshot.data.model),
+                                style: TextStyle(
+                                  fontSize: 18.0,
+                                  color: Colors.black,
+                                ),
+                              ),
+                              subtitle: Text(
+                                '5.4L V8 500hp 480 ft/lb Torque',
+                                style: TextStyle(
+                                  fontSize: 16.0,
+                                  color: Colors.black,
+                                ),
+                              ),
                             ),
                           ),
                           ButtonTheme.bar(
-                            // make buttons use the appropriate styles for cards
                             child: ButtonBar(
                               children: <Widget>[
                                 FlatButton(
-                                  child: const Text('See more info'),
+                                  child: const Text(
+                                    'See more info',
+                                    style: TextStyle(
+                                      fontSize: 16.0,
+                                      color: const Color(0xFF30405A),
+                                    ),
+                                  ),
+                                  color: Colors.deepOrange,
                                   onPressed: () {
                                     Navigator.pushNamed(context, '/info');
                                   },
                                 ),
                                 FlatButton(
-                                  child: const Text('Delete'),
+                                  child: const Text(
+                                    'Delete',
+                                    style: TextStyle(
+                                      fontSize: 16.0,
+                                      color: const Color(0xFF30405A),
+                                    ),
+                                  ),
+                                  color: Colors.deepOrange,
                                   onPressed: () {},
                                 ),
                               ],
@@ -134,52 +154,6 @@ class MyGarage extends StatelessWidget {
                   return CircularProgressIndicator();
                 },
               ),
-              // Card(
-              //   color: Colors.lightBlue[100],
-              //   child: Column(
-              //     mainAxisSize: MainAxisSize.min,
-              //     children: <Widget>[
-              //       Padding(
-              //         padding: EdgeInsets.only(
-              //           top: 40.0,
-              //           bottom: 8.0,
-              //           left: 8.0,
-              //         ),
-              //         child: new ListTile(
-              //           // leading: new Image.network(snapshot.data.carUrl,
-              //           //     height: 100, width: 100),
-              //           leading: new Container(
-              //             width: 110.0,
-              //             height: 90.0,
-              //             decoration: new BoxDecoration(
-              //               shape: BoxShape.circle,
-              //               image: new DecorationImage(
-              //                   fit: BoxFit.fill,
-              //                   image: new AssetImage('images/v6stang.jpg')),
-              //             ),
-              //           ),
-              //           title: Text('2005 Ford Mustang'),
-              //           subtitle: Text('4.0L V6 210HP 240 ft/lb Torque'),
-              //         ),
-              //       ),
-              //       ButtonTheme.bar(
-              //         // make buttons use the appropriate styles for cards
-              //         child: ButtonBar(
-              //           children: <Widget>[
-              //             FlatButton(
-              //               child: const Text('See more info'),
-              //               onPressed: () {},
-              //             ),
-              //             FlatButton(
-              //               child: const Text('Delete'),
-              //               onPressed: () {/* ... */},
-              //             ),
-              //           ],
-              //         ),
-              //       ),
-              //     ],
-              //   ),
-              // ),
               Card(
                 color: Colors.lightBlue[100],
                 child: Column(
@@ -192,8 +166,6 @@ class MyGarage extends StatelessWidget {
                         left: 8.0,
                       ),
                       child: new ListTile(
-                        // leading: new Image.network(snapshot.data.carUrl,
-                        //     height: 100, width: 100),
                         leading: new Container(
                           width: 110.0,
                           height: 90.0,
@@ -204,21 +176,46 @@ class MyGarage extends StatelessWidget {
                                 image: new AssetImage('images/s600.png')),
                           ),
                         ),
-                        title: Text('1995 Mercedes S600'),
-                        subtitle: Text('6L V12 389HP 420 ft/lb Torque'),
+                        title: Text(
+                          '1995 Mercedes S600',
+                          style: TextStyle(
+                            fontSize: 18.0,
+                            color: Colors.black,
+                          ),
+                        ),
+                        subtitle: Text(
+                          '6L V12 389HP 420 ft/lb Torque',
+                          style: TextStyle(
+                            fontSize: 16.0,
+                            color: Colors.black,
+                          ),
+                        ),
                       ),
                     ),
                     ButtonTheme.bar(
-                      // make buttons use the appropriate styles for cards
                       child: ButtonBar(
                         children: <Widget>[
                           FlatButton(
-                            child: const Text('See more info'),
-                            onPressed: () {/* ... */},
+                            child: const Text(
+                              'See more info',
+                              style: TextStyle(
+                                fontSize: 16.0,
+                                color: const Color(0xFF30405A),
+                              ),
+                            ),
+                            color: Colors.deepOrange,
+                            onPressed: () {},
                           ),
                           FlatButton(
-                            child: const Text('Delete'),
-                            onPressed: () {/* ... */},
+                            child: const Text(
+                              'Delete',
+                              style: TextStyle(
+                                fontSize: 16.0,
+                                color: const Color(0xFF30405A),
+                              ),
+                            ),
+                            color: Colors.deepOrange,
+                            onPressed: () {},
                           ),
                         ],
                       ),
@@ -238,8 +235,6 @@ class MyGarage extends StatelessWidget {
                         left: 8.0,
                       ),
                       child: new ListTile(
-                        // leading: new Image.network(snapshot.data.carUrl,
-                        //     height: 100, width: 100),
                         leading: new Container(
                           width: 110.0,
                           height: 90.0,
@@ -250,22 +245,47 @@ class MyGarage extends StatelessWidget {
                                 image: new AssetImage('images/vette2.jpg')),
                           ),
                         ),
-                        title: Text('1985 Chevrolet Corvette'),
-                        subtitle: Text('5.7L V8 230HP 330 ft/lb Torque'),
+                        title: Text(
+                          '1985 Chevrolet Corvette',
+                          style: TextStyle(
+                            fontSize: 18.0,
+                            color: Colors.black,
+                          ),
+                        ),
+                        subtitle: Text(
+                          '5.7L V8 230HP 330 ft/lb Torque',
+                          style: TextStyle(
+                            fontSize: 16.0,
+                            color: Colors.black,
+                          ),
+                        ),
                       ),
                     ),
                     ButtonTheme.bar(
-                      // make buttons use the appropriate styles for cards
                       child: ButtonBar(
                         children: <Widget>[
                           FlatButton(
-                            child: const Text('See more info'),
+                            child: const Text(
+                              'See more info',
+                              style: TextStyle(
+                                fontSize: 16.0,
+                                color: const Color(0xFF30405A),
+                              ),
+                            ),
+                            color: Colors.deepOrange,
                             onPressed: () {
                               Navigator.pushNamed(context, '/info');
                             },
                           ),
                           FlatButton(
-                            child: const Text('Delete'),
+                            child: const Text(
+                              'Delete',
+                              style: TextStyle(
+                                fontSize: 16.0,
+                                color: const Color(0xFF30405A),
+                              ),
+                            ),
+                            color: Colors.deepOrange,
                             onPressed: () {
                               Navigator.pushNamed(context, '/novette');
                             },
@@ -276,98 +296,6 @@ class MyGarage extends StatelessWidget {
                   ],
                 ),
               ),
-              // Card(
-              //   color: Colors.lightBlue[100],
-              //   child: Column(
-              //     mainAxisSize: MainAxisSize.min,
-              //     children: <Widget>[
-              //       Padding(
-              //         padding: EdgeInsets.only(
-              //           top: 40.0,
-              //           bottom: 8.0,
-              //           left: 8.0,
-              //         ),
-              //         child: new ListTile(
-              //           // leading: new Image.network(snapshot.data.carUrl,
-              //           //     height: 100, width: 100),
-              //           leading: new Container(
-              //             width: 110.0,
-              //             height: 90.0,
-              //             decoration: new BoxDecoration(
-              //               shape: BoxShape.circle,
-              //               image: new DecorationImage(
-              //                   fit: BoxFit.fill,
-              //                   image: new AssetImage('images/4runner.jpg')),
-              //             ),
-              //           ),
-              //           title: Text('2016 4Runner TRD Pro'),
-              //           subtitle: Text('4.0L V6 270HP 278 ft/lb Torque'),
-              //         ),
-              //       ),
-              //       ButtonTheme.bar(
-              //         // make buttons use the appropriate styles for cards
-              //         child: ButtonBar(
-              //           children: <Widget>[
-              //             FlatButton(
-              //               child: const Text('See more info'),
-              //               onPressed: () {/* ... */},
-              //             ),
-              //             FlatButton(
-              //               child: const Text('Delete'),
-              //               onPressed: () {/* ... */},
-              //             ),
-              //           ],
-              //         ),
-              //       ),
-              //     ],
-              //   ),
-              // ),
-              // Card(
-              //   color: Colors.lightBlue[100],
-              //   child: Column(
-              //     mainAxisSize: MainAxisSize.min,
-              //     children: <Widget>[
-              //       Padding(
-              //         padding: EdgeInsets.only(
-              //           top: 40.0,
-              //           bottom: 8.0,
-              //           left: 8.0,
-              //         ),
-              //         child: new ListTile(
-              //           // leading: new Image.network(snapshot.data.carUrl,
-              //           //     height: 100, width: 100),
-              //           leading: new Container(
-              //             width: 110.0,
-              //             height: 90.0,
-              //             decoration: new BoxDecoration(
-              //               shape: BoxShape.circle,
-              //               image: new DecorationImage(
-              //                   fit: BoxFit.fill,
-              //                   image: new AssetImage('images/summit.jpg')),
-              //             ),
-              //           ),
-              //           title: Text('2016 Jeep Grand Cherokee Summit'),
-              //           subtitle: Text('5.7L V8 360HP 390 ft/lb Torque'),
-              //         ),
-              //       ),
-              //       ButtonTheme.bar(
-              //         // make buttons use the appropriate styles for cards
-              //         child: ButtonBar(
-              //           children: <Widget>[
-              //             FlatButton(
-              //               child: const Text('See more info'),
-              //               onPressed: () {/* ... */},
-              //             ),
-              //             FlatButton(
-              //               child: const Text('Delete'),
-              //               onPressed: () {/* ... */},
-              //             ),
-              //           ],
-              //         ),
-              //       ),
-              //     ],
-              //   ),
-              // ),
               new RaisedButton(
                 color: Colors.lightBlue[100],
                 child: new Text(

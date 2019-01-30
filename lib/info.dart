@@ -120,24 +120,6 @@ class Info extends StatelessWidget {
                     ],
                   ),
                 ),
-                // Card(
-                //         color: Colors.lightBlue[100],
-                //         child: Column(
-                //             mainAxisSize: MainAxisSize.min,
-                //             children: <Widget>[
-                //               Padding(
-                //                 padding: EdgeInsets.only(
-                //                   bottom: 8.0,
-                //                   left: 8.0,
-                //                 ),
-                //                 child: new ListTile(
-                //                   title: Text('Windsheild Wipers'),
-                //                   subtitle: Text('Type:\n\n\Capacity: 4.0 Quarts'),
-                //                 ),
-                //               ),
-                //     ],
-                //   ),
-                // ),
                 Card(
                   color: Colors.lightBlue[100],
                   child: Column(

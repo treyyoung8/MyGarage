@@ -28,9 +28,19 @@ class LoginPage extends StatelessWidget {
         ),
         body: new Container(
           decoration: new BoxDecoration(color: const Color(0xFF30405A)),
-          padding: EdgeInsets.only(top: 48.0, left: 24.0, right: 24.0),
+          padding: EdgeInsets.only(top: 8.0, left: 24.0, right: 24.0),
           child: new ListView(
             children: <Widget>[
+              new Container(
+                  width: 80.0,
+                  height: 250.0,
+                  decoration: new BoxDecoration(
+                    shape: BoxShape.rectangle,
+                    image: new DecorationImage(
+                        fit: BoxFit.fitWidth,
+                        image: new AssetImage('images/logo.png')),
+                  ),
+                ),
               new Center(
                 child: new Text(
                   'Welcome to MyGarage',
@@ -58,6 +68,7 @@ class LoginPage extends StatelessWidget {
                     color: Colors.deepOrange,
                 ),
                 decoration: InputDecoration(labelText: 'Enter your password'),
+                obscureText: true,
               ),
               new SizedBox(
                 height: 34.0,
