@@ -114,7 +114,8 @@ class Info extends StatelessWidget {
                         ),
                         child: new ListTile(
                           title: Text('Oil'),
-                          subtitle: Text('Type: 10w30\n\Capacity: 4.0 Quarts\n\Brand: Mobil 1'),
+                          subtitle: Text(
+                              'Type: 10w30\n\Capacity: 4.0 Quarts\n\Brand: Mobil 1'),
                         ),
                       ),
                     ],
@@ -132,7 +133,8 @@ class Info extends StatelessWidget {
                         ),
                         child: new ListTile(
                           title: Text('Air Filter'),
-                          subtitle: Text('Brand: K&N\n\Part Number: 25-121209-1'),
+                          subtitle:
+                              Text('Brand: K&N\n\Part Number: 25-121209-1'),
                         ),
                       ),
                     ],
