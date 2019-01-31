@@ -32,15 +32,15 @@ class LoginPage extends StatelessWidget {
           child: new ListView(
             children: <Widget>[
               new Container(
-                  width: 80.0,
-                  height: 250.0,
-                  decoration: new BoxDecoration(
-                    shape: BoxShape.rectangle,
-                    image: new DecorationImage(
-                        fit: BoxFit.fitWidth,
-                        image: new AssetImage('images/logo.png')),
-                  ),
+                width: 80.0,
+                height: 250.0,
+                decoration: new BoxDecoration(
+                  shape: BoxShape.rectangle,
+                  image: new DecorationImage(
+                      fit: BoxFit.fitWidth,
+                      image: new AssetImage('images/logo.png')),
                 ),
+              ),
               new Center(
                 child: new Text(
                   'Welcome to MyGarage',
@@ -53,9 +53,9 @@ class LoginPage extends StatelessWidget {
               ),
               new TextFormField(
                 style: new TextStyle(
-                    fontSize: 18.00,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.deepOrange,
+                  fontSize: 18.00,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.deepOrange,
                 ),
                 decoration: InputDecoration(
                   labelText: 'Enter your username',
@@ -63,9 +63,9 @@ class LoginPage extends StatelessWidget {
               ),
               new TextFormField(
                 style: new TextStyle(
-                    fontSize: 18.00,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.deepOrange,
+                  fontSize: 18.00,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.deepOrange,
                 ),
                 decoration: InputDecoration(labelText: 'Enter your password'),
                 obscureText: true,
