@@ -60,7 +60,7 @@ class Info extends StatelessWidget {
                           ),
                         ),
                         subtitle: Text(
-                          '\n\5.7L V8 230HP 330 ft/lb Torque\n\4+3 Manual Transmission\n\RWD\n\20 Gallon Fuel Tank\n\Premium Fuel Only',
+                          '\n\5.7L V8 230HP 330 ft/lb Torque\n\4+3 Manual Transmission\n\RWD',
                           style: TextStyle(
                             color: Colors.black,
                           ),
@@ -96,7 +96,7 @@ class Info extends StatelessWidget {
                         child: new ListTile(
                           title: Text('Tires'),
                           subtitle: Text(
-                              'Front PSI: 35, Rear PSI: 35\n\Front Size: 255/50VR-16, Rear Size: 255/50VR-16\n\Recommended Replacement: GOODYEAR EAGLE VR'),
+                              'Front PSI: 35, Rear PSI: 35\n\Front Size: 255/50VR-16, Rear Size: 255/50VR-16\n\Brand: GOODYEAR EAGLE VR'),
                         ),
                       ),
                     ],
@@ -115,7 +115,7 @@ class Info extends StatelessWidget {
                         child: new ListTile(
                           title: Text('Oil'),
                           subtitle: Text(
-                              'Type: 10w30\n\Capacity: 4.0 Quarts\n\Brand: Mobil 1'),
+                              'Type: 10w30\n\Capacity: 4.0 Quarts\n\Brand: Mobil 1\n\Oil Filter: AC Type PF25'),
                         ),
                       ),
                     ],
@@ -133,8 +133,7 @@ class Info extends StatelessWidget {
                         ),
                         child: new ListTile(
                           title: Text('Air Filter'),
-                          subtitle:
-                              Text('Brand: K&N\n\Part Number: 25-121209-1'),
+                          subtitle: Text('Part Number: AC Type A917C'),
                         ),
                       ),
                     ],
@@ -153,7 +152,7 @@ class Info extends StatelessWidget {
                         child: new ListTile(
                           title: Text('Lights'),
                           subtitle:
-                              Text('Headlights:\n\Taillights:\n\Turn Signals:'),
+                              Text('Headlamps Part Number: H6054\n\Headlamps Wattage: 35W/65W\n\Taillight Bulbs Part Number: 2057\n\Taillights Bulbs Wattage: 32/2\n\Turn Signals Part Number: 2057NA\n\Turn Signals Wattage: 2.4/1.5'),
                         ),
                       ),
                     ],
@@ -170,8 +169,17 @@ class Info extends StatelessWidget {
                           left: 8.0,
                         ),
                         child: new ListTile(
-                          title: Text('Fuses'),
-                          subtitle: Text('Type:'),
+                          title: Text('Fuse Panel Layout'),
+                          subtitle: new Container(
+                            width: 80.0,
+                            height: 200.0,
+                            decoration: new BoxDecoration(
+                              shape: BoxShape.rectangle,
+                              image: new DecorationImage(
+                                  fit: BoxFit.fitWidth,
+                                  image: new AssetImage('images/fuse.jpg')),
+                            ),
+                          ),
                         ),
                       ),
                     ],
@@ -210,6 +218,42 @@ class Info extends StatelessWidget {
                           title: Text('Fuel'),
                           subtitle: Text(
                               'Type: Premium Fuel only\n\Capacity: 20 Gallons'),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Card(
+                  color: Colors.lightBlue[100],
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                      Padding(
+                        padding: EdgeInsets.only(
+                          bottom: 8.0,
+                          left: 8.0,
+                        ),
+                        child: new ListTile(
+                          title: Text('Spark Plugs'),
+                          subtitle: Text('Gap: 0.035\n\Part Number: AC Type R43CTS'),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Card(
+                  color: Colors.lightBlue[100],
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                      Padding(
+                        padding: EdgeInsets.only(
+                          bottom: 8.0,
+                          left: 8.0,
+                        ),
+                        child: new ListTile(
+                          title: Text('Battery'),
+                          subtitle: Text('Model Number: 70-500'),
                         ),
                       ),
                     ],

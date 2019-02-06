@@ -49,6 +49,7 @@ flutter:
     - images/v6stang.jpg
     - images/4runner.jpg
     - images/summit.jpg
+    - images/fuse.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.
